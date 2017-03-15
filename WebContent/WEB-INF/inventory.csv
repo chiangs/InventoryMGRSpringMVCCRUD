@@ -1,0 +1,22 @@
+id,brand,type,size,batch,qty pr carton, qty pr pallet
+1,Iskilde,still,33cl,2015-Jan,12,1596
+2,Iskilde,still,67cl,2015-Jan,12,1596
+3,Iskilde,sparkling,33cl,2015-Feb,12,1596
+4,Iskilde,sparkling,67cl,2015-Mar,6,750
+5,Iskilde,lemon,33cl,2015-Apr,12,1596
+6,Iskilde,still,100cl,2015-Jul,6,480
+7,Iskilde,sparkling,100cl,2015-Jun,6,480
+8,Iskilde,sparkling,100cl,2015-Jun,6,480
+9,Iskilde,sparkling,100cl,2015-Jun,6,480
+10,Iskilde,sparkling,100cl,2015-Jun,6,480
+11,Iskilde,still,33cl,2015-Jan,12,1596
+12,Iskilde,still,67cl,2015-Jan,12,1596
+13,Iskilde,sparkling,33cl,2015-Feb,12,1596
+14,Iskilde,lemon,33cl,2015-Apr,12,1596
+15,Iskilde,still,100cl,2015-Jul,6,480
+16,Iskilde,sparkling,100cl,2015-Jun,6,480
+17,Iskilde,sparkling,100cl,2015-Jun,6,480
+18,Iskilde,lemon,33cl,2015-Apr,12,1596
+19,Iskilde,still,100cl,2015-Jul,6,480
+20,Iskilde,sparkling,100cl,2015-Jun,6,480
+21,Iskilde,sparkling,100cl,2015-Jun,6,480
