@@ -9,7 +9,7 @@ An inventory management web-app using Java and the Spring MVC framework with CRU
 2. [Class Structure Overview](#class-structure-overview)
 
 ## How to Execute
-- The web-app is hosted on: insert URL <a href="http://52.43.150.156:8080/InventoryMGRSpringMVCCRUD/">**here**</a>
+- The web-app is hosted on: insert URL <a href="http://www.chiangs.ninja:8080/InventoryMGRSpringMVCCRUD/">**here**</a>
 - Download the entire program as a .war file <a href="InventoryMGRSpringMVCCRUD.war">**here**</a>
 
 ## Instructions
@@ -26,5 +26,5 @@ An inventory management web-app using Java and the Spring MVC framework with CRU
 
 <img src="WebContent/images/chart.png" height="400">
 
-## Code Examples 
+## Code Examples
 **example of some code**
