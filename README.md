@@ -26,5 +26,5 @@ An inventory management web-app using Java and the Spring MVC framework with CRU
 
 <img src="WebContent/images/chart.png" height="400">
 
-## Code Examples
+## Code Examples 
 **example of some code**
