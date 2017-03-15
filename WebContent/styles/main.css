@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+}
+
+* h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+
+* h2, h3, h4, p, a, blockquote {
+    font-family: 'Quicksand', serif;
+}
+
+body {
+    padding: 50px 0 0 0;
+}
+
+.bold {
+    font-weight: bold;
+    text-align: center;
+}
+
+.bold1 {
+    font-weight: bold;
+    font-family: monospace;
+}
+
+
+/* NavBar */
+
+.navbar-default {
+    background-color: #2e3549;
+    border: none;
+}
+
+#logo {
+    color: #fff;
+    padding: 0;
+}
+
+.navbar-default .navbar-toggle {
+    background-color: #2e3549;
+    border: none;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: #2f7a94;
+}
+
+.icon-bar {
+    background-color: #ecf035 !important;
+}
+
+#logo img {
+    height: 100%;
+    padding: 5px 18px;
+    width: auto;
+}
+
+#myNavbar {
+    padding: 0;
+}
+
+#myNavbar a {
+    color: #eeeeee;
+    text-transform: uppercase;
+    margin: 0 0 0 8px;
+    text-align: center;
+    font-weight: 900;
+}
+
+.navbar h4 {
+    color: #fff;
+    font-weight: 900;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+#myNavbar a:hover {
+    text-align: center;
+}
+
+.active a {
+    color: #fff !important;
+    background-color: #2f7a94 !important;
+    font-style: italic;
+}
+
+
+
+
+/* Footer */
+
+footer {
+    background-color: rgba(255, 255, 255, 0.85);
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 30px;
+    padding: 5px;
+    z-index: 10;
+}
+
+.footer p, a {
+    font-size: calc(.7em + .2vw);
+    color: #878686;
+}
+
+.footer a:hover {
+    color: #2f7a94;
+}
+
+@media only screen and (max-width: 300px) {
+    footer {
+        height: 50px;
+        padding: 5px;
+    }
+}

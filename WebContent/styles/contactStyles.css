@@ -1,0 +1,29 @@
+.contact-content {
+    text-align: center;
+    padding: 100px 0;
+}
+
+.contact-content h1 {
+    font-size: 4vw;
+}
+
+.contact-content a {
+    color: #333333;
+}
+
+.contact-content p {
+    font-size: 20px;
+}
+
+
+.contact-content ul {
+    padding: 20px 0 40px 0;
+}
+
+.contact-content li {
+    line-height: 3em;
+}
+
+#social-list {
+    margin: 0;
+}
