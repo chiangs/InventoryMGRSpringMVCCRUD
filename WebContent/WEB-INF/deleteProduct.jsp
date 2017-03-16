@@ -46,10 +46,10 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a class="bold" href="viewProduct.jsp">inventory list</a></li>
-                    <li><a class="bold" href="addProduct.jsp">add product</a></li>
-                    <li><a class="bold" href="editProduct.jsp">edit product</a></li>
-                    <li class="active"><a class="bold" href="deleteProduct.jsp">delete product</a></li>
+                    <li><a class="bold" href="WEB-INF/viewProduct.jsp">inventory list</a></li>
+                    <li><a class="bold" href="WEB-INF/addProduct.jsp">add product</a></li>
+                    <li><a class="bold" href="WEB-INF/editProduct.jsp">edit product</a></li>
+                    <li class="active"><a class="bold" href="WEB-INF/deleteProduct.jsp">delete product</a></li>
                     <li><a class="bold" href="contact.html">contact</a></li>
                 </ul>
             </div>
