@@ -1,5 +1,5 @@
 # Summary
-An inventory management web-app using Java and the Spring MVC framework with CRUD functionality. Although this web-app implements session control, the database does not persist and reverts back to the original state of pre-loaded inventory when the server is restarted.
+An inventory management web-app using Java and the Spring MVC framework with CRUD functionality. Although this web-app implements session control, the database does not persist and reverts back to the original state of pre-loaded inventory when the server is restarted. This project is a Maven configured project built in the Eclipse IDE w/ SpringMVC dependencies. Future similar projects will be developed with the Spring Tool Suite and Gradle managed dependencies.
 
 <img src="#" height="350">
 <img src="#" height="350">

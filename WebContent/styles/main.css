@@ -101,11 +101,12 @@ h4 a {
     font-style: italic;
 }
 
-.index-main {
-    background-image: url('./images/mainBackground.jpg');
-    background-size: contain;
-    width: 100%;
-    height: auto;
+.mainBackground {
+    background-image: url('../images/mainBackground.jpg');
+    background-size: cover;
+    margin:0 auto;
+    height: 100%;
+    width: auto;
 }
 
 
