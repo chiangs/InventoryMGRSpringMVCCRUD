@@ -39,6 +39,10 @@ h4 a {
     font-family: monospace;
 }
 
+.center {
+    text-align: center;
+}
+
 
 /* NavBar */
 
@@ -102,11 +106,21 @@ h4 a {
 }
 
 .mainBackground {
-    background-image: url('../images/mainBackground.jpg');
-    background-size: cover;
     margin:0 auto;
-    height: 100%;
+    height: 50vh;
     width: auto;
+}
+
+.mainBackgroundImage {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.mainBackgroundImage img {
+    height: 60vh;
+    padding-right: 30px;
 }
 
 

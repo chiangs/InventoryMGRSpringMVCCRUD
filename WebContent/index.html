@@ -29,45 +29,47 @@
     <div class="index-main">
 
 
-    <!--Begin Navbar-->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <!--Begin Navbar-->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-                <h4>
+                    <h4>
                     <a href="index.html">Inventory Management SpringMVC</a>
                 </h4>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="bold" href="WEB-INF/viewProduct.jsp">inventory list</a></li>
+                        <li><a class="bold" href="WEB-INF/addProduct.jsp">add product</a></li>
+                        <li><a class="bold" href="WEB-INF/editProduct.jsp">edit product</a></li>
+                        <li class="active"><a class="bold" href="WEB-INF/deleteProduct.jsp">delete product</a></li>
+                        <li><a class="bold" href="contact.html">contact</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a class="bold" href="WEB-INF/viewProduct.jsp">inventory list</a></li>
-                    <li><a class="bold" href="WEB-INF/addProduct.jsp">add product</a></li>
-                    <li><a class="bold" href="WEB-INF/editProduct.jsp">edit product</a></li>
-                    <li><a class="bold" href="WEB-INF/deleteProduct.jsp">delete product</a></li>
-                    <li><a class="bold" href="contact.html">contact</a></li>
-                </ul>
-            </div>
+        </nav>
+
+
+        <!--Begin Content-->
+
+        <div class="container well">
+
+            <h1>Welcome to the Inventory Management System</h1>
+            <h2>This system manages the inventory of Iskilde ApS, Skanderborg, Denmark</h2>
+
+        <div class="center">
+            <h4>Please select one of the options in the navigation bar at the top to begin.</h4>
         </div>
-    </nav>
-
-
-    <!--Begin Content-->
-
-    <div class="container well">
-
-    	<h1>Welcome to the Inventory Management System</h1>
-    	<h2>This system manages the inventory of Iskilde ApS, Skanderborg, Denmark</h2>
-    	<p>The inventory includes the full range of bottled water products<p>
-
-
-
     </div>
     <div class="mainBackground">
-        test
+        <div class="mainBackgroundImage">
+            <img src="./images/mainBackground.jpg" alt="main background image of product family">
+        </div>
     </div>
 
 
