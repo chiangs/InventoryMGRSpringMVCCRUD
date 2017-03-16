@@ -15,6 +15,20 @@ body {
     padding: 50px 0 0 0;
 }
 
+h4 a:hover {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+h4 a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
 .bold {
     font-weight: bold;
     text-align: center;
@@ -78,6 +92,7 @@ body {
 
 #myNavbar a:hover {
     text-align: center;
+    color: yellow;
 }
 
 .active a {

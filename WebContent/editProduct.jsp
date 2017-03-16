@@ -4,9 +4,82 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+ <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Inventory Management SpringMVC</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:500,900|Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+
+    <script>
+        // A $( document ).ready() block.
+        $(document).ready(function() {
+            console.log("ready!");
+        });
+    </script>
+<title>Edit Product</title>
 </head>
 <body>
+<div class="index-main">
+
+
+    <!--Begin Navbar-->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <h4>
+                <a href="index.html">Inventory Management SpringMVC</a>
+            </h4>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="bold" href="viewProduct.jsp">inventory list</a></li>
+                    <li><a class="bold" href="addProduct.jsp">add product</a></li>
+                    <li class="active"><a class="bold" href="editProduct.jsp">edit product</a></li>
+                    <li><a class="bold" href="deleteProduct.jsp">delete product</a></li>
+                    <li><a class="bold" href="contact.html">contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--Begin Content-->
+
+
+
+        <!-- /container -->
+        <!-- jQuery first, then Bootstrap JS. -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </div>
+
+</body>
+
+<!-- Footer -->
+<footer>
+    <div class="footer">
+        <div class="container-fluid ">
+            <p>Coded and designed by <a style="color: #1e88cb" href="mailto:stephen.e.chiang@gmail.com">Stephen Chiang </a>&copy;&nbsp;2016&ensp;|&ensp;
+                <a target="_blank" href="https://www.linkedin.com/in/chiangs"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a target="_blank" href="https://500px.com/chiangs"><i class="fa fa-500px" aria-hidden="true"></i></a>
+                <a target="_blank" href="https://github.com/chiangs"><i class="fa fa-github" aria-hidden="true"></i></a>
+                <a target="_blank" href="https://www.instagram.com/chiangse/"><i class="fa fa-instagram" aria-hidden="true"></i></a></p>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>
