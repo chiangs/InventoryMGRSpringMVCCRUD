@@ -3,7 +3,7 @@ package data;
 import java.util.List;
 
 public interface ProductDAO {
-	public List<Product> loadInventory();
+	public void loadInventory();
 	public List<Product> displayInventory();
 	public Product displayProduct(int ID);
 	public Product getProductByID();

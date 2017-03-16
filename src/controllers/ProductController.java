@@ -13,4 +13,9 @@ public class ProductController {
 	@Autowired
 	private ProductService productService;
 
+	public void setDao(MockProductDAO mockDAO) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

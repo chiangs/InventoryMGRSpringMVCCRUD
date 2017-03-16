@@ -45,10 +45,15 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a class="bold" href="WEB-INF/viewProduct.jsp">inventory list</a></li>
-                    <li><a class="bold" href="WEB-INF/addProduct.jsp">add product</a></li>
-                    <li><a class="bold" href="WEB-INF/editProduct.jsp">edit product</a></li>
-                    <li><a class="bold" href="WEB-INF/deleteProduct.jsp">delete product</a></li>
+                    <li><a class="bold" href="WEB-INF/viewInventory.jsp">inventory list</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">View/Edit <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="bold" href="WEB-INF/viewProduct.jsp">view product</a></li>
+                            <li><a class="bold" href="WEB-INF/addProduct.jsp">add product</a></li>
+                            <li><a class="bold" href="WEB-INF/editProduct.jsp">edit product</a></li>
+                        </ul>
+                    </li>
                     <li class="active"><a class="bold" href="contact.html">contact</a></li>
                 </ul>
             </div>

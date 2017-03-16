@@ -123,6 +123,22 @@ h4 a {
     padding-right: 30px;
 }
 
+.dropdown-menu {
+  background-color: #2e3549;
+}
+
+.navbar.navbar-default .dropdown-menu > li > a:hover,
+.navbar.navbar-default .dropdown-menu>li>a:focus {
+  background-color: #2f7a94 !important;
+}
+
+.navbar.navbar-default .navbar-nav li.dropdown.open > .dropdown-toggle,
+.navbar.navbar-default .navbar-nav li.dropdown.active > .dropdown-toggle,
+.navbar.navbar-default .navbar-nav li.dropdown.open.active > .dropdown-toggle {
+  background: #2f7a94;
+}
+
+
 
 
 /* Footer */
