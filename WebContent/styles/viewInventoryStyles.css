@@ -12,4 +12,9 @@ table th {
 table td {
 	text-align:right;
 	padding-top: 10px;
+	padding-left: 10px;
+}
+
+.viewButton {
+	padding-left: 20px;
 }

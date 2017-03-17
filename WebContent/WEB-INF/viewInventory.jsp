@@ -74,9 +74,9 @@
 		<!--Begin Content-->
 		<h1 class="center">Inventory List</h1>
 
-		<div class="container well">
+		<div class="container-fluid well">
 			<div id="inventoryList">
-				<table>
+				<table style="overflow-x:auto;">
 					<tr>
 						<th class="spacing">Product ID</th>
 						<th class="spacing">Brand</th>
