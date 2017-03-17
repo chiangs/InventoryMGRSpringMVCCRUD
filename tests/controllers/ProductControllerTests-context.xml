@@ -10,11 +10,15 @@
 
 	<context:component-scan base-package="controllers" />
 	<mvc:annotation-driven />
-	
-	
+
+	<bean id="dao" class="data.ProductDAOImpl" />
+
+	<bean id="ProductService" class="services.ProductServiceImpl">
+		<property name="productDAO" ref="dao"></property>
+	</bean>
 
 	<!-- A mock object to create states -->
-	<bean id="mockProductDAO" class="controllers.MockStateDAO" />
+	<bean id="mockProductDAO" class="controllers.MockProductDAO" />
 
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">

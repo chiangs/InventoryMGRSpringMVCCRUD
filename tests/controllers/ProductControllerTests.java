@@ -101,6 +101,7 @@ public class ProductControllerTests {
 		
 		@Test
 		public void test_Get_ProductData_with_invalid_ID_param_returns_null() {
+			System.out.println("test");
 			try {
 				MvcResult result = mockMvc.perform(get("/GetProductData.do").param("id", "3"))
 						.andExpect(status().isOk()).andReturn();
@@ -115,7 +116,7 @@ public class ProductControllerTests {
 			}
 		}
 		
-		@Test void test_Post_EditProduct_do_edits_product() {
+//		@Test void test_Post_EditProduct_do_edits_product() {
 //			try {
 //				MvcResult result = mockMvc.perform(get("/GetProductData.do").param("id", "2"))
 //						.andExpect(status().isOk()).andReturn();
@@ -135,7 +136,6 @@ public class ProductControllerTests {
 //				e.printStackTrace();
 //				fail(e.toString());
 //			}
-		}
 		
 		@Test
 		public void test_Post_NewProduct_do_adds_product() {

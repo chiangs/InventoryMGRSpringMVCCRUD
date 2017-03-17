@@ -41,13 +41,35 @@ public class MockProductDAO implements ProductDAO {
 
 	@Override
 	public void addProduct(Product newProd) {
-		inventory.add(newProd);
+		Product p = new Product();
+		p.setID(inventory.get(inventory.size()-1).getID()+1);
+		p.setBrand(newProd.getBrand());
+		p.setType(newProd.getType());
+		p.setSize(newProd.getSize());
+		p.setBatch(newProd.getBatch());
+		p.setQtyCarton(newProd.getQtyCarton());
+		p.setQtyPallet(newProd.getQtyPallet());
+		inventory.add(p);
 	}
 
 	@Override
 	public List<Product> editProduct(Product prod) {
-		// TODO Auto-generated method stub
-		return null;
+
+		int index = 0;
+		for (Product product : inventory) {
+			if (product.getID() == prod.getID()) {
+				index = inventory.indexOf(product);
+				break;
+			}
+		}
+		Product p = inventory.get(index);
+		p.setBrand(prod.getBrand());
+		p.setType(prod.getType());
+		p.setSize(prod.getSize());
+		p.setBatch(prod.getBatch());
+		p.setQtyCarton(prod.getQtyCarton());
+		p.setQtyPallet(prod.getQtyPallet());
+		return inventory;
 	}
 
 	@Override
