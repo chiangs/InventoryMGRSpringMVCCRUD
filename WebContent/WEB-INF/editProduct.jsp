@@ -74,42 +74,54 @@
 		</nav>
 
 		<!--Begin Content-->
+		<div class="container">
+			<div class="heading">
+				<h1>Edit Product</h1>
+				<div class="well">
+					<div class="editForm">
 
-		<div class="editForm">
+						<form action="EditProductData.do" method="POST">
+							<select name="ID">
+								<c:forEach var="item" items="${inventory}">
+									<c:choose>
+										<c:when test="${product != null && product.ID == item.ID}">
+											<option value="${item.ID}" selected>Product ID:
+												${item.ID}</option>
+										</c:when>
+										<c:otherwise>
+											<option value="${item.ID}">Product ID: ${item.ID}</option>
+										</c:otherwise>
+									</c:choose>
+								</c:forEach>
 
-			<form action="EditProductData.do" method="POST">
-				<select name="ID">
-					<c:forEach var="item" items="${inventory}">
-						<c:choose>
-							<c:when test="${product != null && product.ID == item.ID}">
-								<option value="${item.ID}" selected>Product ID: ${item.ID}</option>
-							</c:when>
-							<c:otherwise>
-								<option value="${item.ID}">Product ID: ${item.ID}</option>
-							</c:otherwise>
-						</c:choose>
-					</c:forEach>
+
+							</select> <br> <input type="text" name="brand"
+								value="${product.brand}" placeholder="Brand" /><br> <input
+								type="text" name="type" value="${product.type}"
+								placeholder="Lemon/Sparkling/Still" /><br> <input
+								type="text" name="size" value="${product.size}"
+								placeholder="Bottle Size in cl" /><br> <input type="text"
+								name="batch" value="${product.batch}"
+								placeholder="Batch Date (YYYY-Mmm)" /><br> <input
+								type="text" name="qtyCarton" value="${product.qtyCarton}"
+								placeholder="Qty Bottles / Carton" /><br> <input
+								type="text" name="qtyPallet" value="${product.qtyPallet}"
+								placeholder="Qty Bottles / Pallet" /> <br> <input
+								type="submit" value="submit" />
+
+						</form>
+					</div>
+				</div>
+			</div>
 
 
-				</select> <br> <input type="text" name="brand" value="${product.brand}" placeholder="Brand"/><br>
-				<input type="text" name="type" value="${product.type}" placeholder="Lemon/Sparkling/Still" /><br>
-				<input type="text" name="size" value="${product.size}" placeholder="Bottle Size in cl"/><br> <input
-					type="text" name="batch" value="${product.batch}" placeholder="Batch Date (YYYY-Mmm)" /><br>
-				<input type="text" name="qtyCarton" value="${product.qtyCarton}" placeholder="Qty Bottles / Carton" /><br>
-				<input type="text" name="qtyPallet" value="${product.qtyPallet}" placeholder="Qty Bottles / Pallet" />
-				<br> <input type="submit" value="submit" />
-
-			</form>
+			<!-- /container -->
+			<!-- jQuery first, then Bootstrap JS. -->
+			<script
+				src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+			<script
+				src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		</div>
-
-		<!-- /container -->
-		<!-- jQuery first, then Bootstrap JS. -->
-		<script
-			src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<script
-			src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	</div>
-
 </body>
 
 <!-- Footer -->

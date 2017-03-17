@@ -58,9 +58,9 @@
 						data-toggle="dropdown" role="button" aria-haspopup="true"
 						aria-expanded="false">View/Edit <span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a class="bold" href="ViewProduct.do">view
+							<li><a class="bold" href="ViewProduct.do">view product</a></li>
+							<li class="active"><a class="bold" href="AddProduct.do">add
 									product</a></li>
-							<li class="active"><a class="bold" href="AddProduct.do">add product</a></li>
 							<li><a class="bold" href="EditProduct.do">edit product</a></li>
 						</ul></li>
 					<li><a class="bold" href="DeleteProduct.do">delete product</a></li>
@@ -71,21 +71,32 @@
 		</nav>
 
 		<!--Begin Content-->
-		<div class="addForm">
+
+		<div class="container">
+			<div class="heading">
+				<h1>Add New Product</h1>
+				<div class="well">
+					<div class="addForm">
 
 
-			<form action="AddProductData.do" method="POST">
-				
-				</select> <br> <input type="text" name="brand" placeholder="Enter Brand Name" /><br>
-				<input type="text" name="type" placeholder="Still/Sparkling/Lemon" /><br>
-				<input type="text" name="size" placeholder="Bottle Size" /><br> <input
-					type="text" name="batch" placeholder="Batch Date (YYYY-Mmm)" /><br>
-				<input type="text" name="qtyCarton" placeholder="Qty Bottles / Carton" /><br>
-				<input type="text" name="qtyPallet" placeholder="Qty Bottles / Pallet" />
-				<br> <input type="submit" value="submit" />
+						<form action="AddProductData.do" method="POST">
 
-			</form>
+							</select> <br> <input type="text" name="brand"
+								placeholder="Enter Brand Name" /><br> <input type="text"
+								name="type" placeholder="Still/Sparkling/Lemon" /><br> <input
+								type="text" name="size" placeholder="Bottle Size" /><br> <input
+								type="text" name="batch" placeholder="Batch Date (YYYY-Mmm)" /><br>
+							<input type="text" name="qtyCarton"
+								placeholder="Qty Bottles / Carton" /><br> <input
+								type="text" name="qtyPallet" placeholder="Qty Bottles / Pallet" />
+							<br> <input type="submit" value="submit" />
+
+						</form>
+					</div>
+				</div>
+			</div>
 		</div>
+
 
 
 		<!-- /container -->

@@ -60,12 +60,12 @@
 						data-toggle="dropdown" role="button" aria-haspopup="true"
 						aria-expanded="false">View/Edit <span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a class="bold" href="ViewProduct.do">view
-									product</a></li>
+							<li><a class="bold" href="ViewProduct.do">view product</a></li>
 							<li><a class="bold" href="AddProduct.do">add product</a></li>
 							<li><a class="bold" href="EditProduct.do">edit product</a></li>
 						</ul></li>
-					<li class="active"><a class="bold" href="DeleteProduct.do">delete product</a></li>
+					<li class="active"><a class="bold" href="DeleteProduct.do">delete
+							product</a></li>
 					<li><a class="bold" href="contact.html">contact</a></li>
 				</ul>
 			</div>
@@ -73,20 +73,27 @@
 		</nav>
 
 		<!--Begin Content-->
+		<div class="container">
+			<div class="heading">
+				<h1>Delete Product by ID#</h1>
+				<div class="well">
+					<div class="deleteForm">
 
-		<div class="deleteForm">
-		
-					<form action="DeleteProductData.do" method="POST">
-				<select name="ID">
-					<c:forEach var="item" items="${inventory}">
+						<form action="DeleteProductData.do" method="POST">
+							<select name="ID">
+								<c:forEach var="item" items="${inventory}">
 
-						<option value="${item.ID}">Product ID: ${item.ID}</option>
+									<option value="${item.ID}">Product ID: ${item.ID}</option>
 
-					</c:forEach>
-				</select> <br><input type="submit" value="submit" />
+								</c:forEach>
+							</select> <br> <input type="submit" value="submit" />
 
-			</form>
+						</form>
+					</div>
+				</div>
+			</div>
 		</div>
+
 
 		<!-- /container -->
 		<!-- jQuery first, then Bootstrap JS. -->
@@ -95,7 +102,6 @@
 		<script
 			src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</div>
-
 </body>
 
 <!-- Footer -->
