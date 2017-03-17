@@ -60,7 +60,7 @@
 						<ul class="dropdown-menu">
 							<li><a class="bold" href="ViewProduct.do">view
 									product</a></li>
-							<li><a class="bold" href="AddProduct.do">add product</a></li>
+							<li class="active"><a class="bold" href="AddProduct.do">add product</a></li>
 							<li><a class="bold" href="EditProduct.do">edit product</a></li>
 						</ul></li>
 					<li><a class="bold" href="DeleteProduct.do">delete product</a></li>
