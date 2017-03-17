@@ -5,12 +5,13 @@ This web-app is my first attempt at using SpringMVC. I first wrote JUnit tests b
 
 <p align="center">
 <img src="WebContent/images/screen1.png" height="250" style="border: solid black 1px">
-<img src="WebContent/images/screen2.png" height="250">
+<img src="WebContent/images/screen2.png" height="250"></p>
+<p align="center">
 <img src="WebContent/images/screen3.png" height="250">
-<img src="WebContent/images/screen4.png" height="250">
+<img src="WebContent/images/screen4.png" height="250"></p>
+<p align="center">
 <img src="WebContent/images/screen5.png" height="250">
-<img src="WebContent/images/screen6.png" height="250">
-</p>
+<img src="WebContent/images/screen6.png" height="250"></p>
 
 ## In This Document
 1. [How to Execute](#how-to-execute)
