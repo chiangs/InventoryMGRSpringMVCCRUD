@@ -106,8 +106,8 @@
 								type="text" name="qtyCarton" value="${product.qtyCarton}"
 								placeholder="Qty Bottles / Carton" /><br> <input
 								type="text" name="qtyPallet" value="${product.qtyPallet}"
-								placeholder="Qty Bottles / Pallet" /> <br> <input
-								type="submit" value="submit" />
+								placeholder="Qty Bottles / Pallet" /> <br> <button
+								type="submit" value="submit" class="btn btn-primary">submit</button>
 
 						</form>
 					</div>

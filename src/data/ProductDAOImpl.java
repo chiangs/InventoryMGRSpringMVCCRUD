@@ -39,7 +39,8 @@ public class ProductDAOImpl implements ProductDAO {
 				String batch = tokens[4];
 				String qtyCarton = tokens[5];
 				String qtyPallet = tokens[6];
-				inventory.add(new Product(id, brand, type, size, batch, qtyCarton, qtyPallet));
+				String image = tokens[7];
+				inventory.add(new Product(id, brand, type, size, batch, qtyCarton, qtyPallet, image));
 			}
 		} catch (Exception e) {
 			System.err.println(e);

@@ -86,7 +86,7 @@
 									<option value="${item.ID}">Product ID: ${item.ID}</option>
 
 								</c:forEach>
-							</select> <br> <input type="submit" value="submit" />
+							</select> <br> <button type="submit" value="submit" class="btn btn-danger">delete</button>
 
 						</form>
 					</div>

@@ -89,7 +89,7 @@
 							<input type="text" name="qtyCarton"
 								placeholder="Qty Bottles / Carton" /><br> <input
 								type="text" name="qtyPallet" placeholder="Qty Bottles / Pallet" />
-							<br> <input type="submit" value="submit" />
+							<br> <button type="submit" value="submit" class="btn btn-primary">submit</button>
 
 						</form>
 					</div>

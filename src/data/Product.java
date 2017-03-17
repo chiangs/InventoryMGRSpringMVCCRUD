@@ -8,6 +8,7 @@ public class Product {
 	private String batch;
 	private String qtyCarton;
 	private String qtyPallet;
+	private String image;
 	
 	public Product(){}
 
@@ -67,7 +68,15 @@ public class Product {
 		this.qtyPallet = qtyPallet;
 	}
 
-	public Product(int iD, String brand, String type, String size, String batch, String qtyCarton, String qtyPallet) {
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
+	}
+
+	public Product(int iD, String brand, String type, String size, String batch, String qtyCarton, String qtyPallet, String image) {
 		super();
 		ID = iD;
 		this.brand = brand;
@@ -76,6 +85,7 @@ public class Product {
 		this.batch = batch;
 		this.qtyCarton = qtyCarton;
 		this.qtyPallet = qtyPallet;
+		this.image = image;
 	}
 
 	@Override

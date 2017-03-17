@@ -55,13 +55,13 @@
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a class="bold" href="GetInventory.do">inventory
-							list</a></li>
+					<li><a class="bold" href="GetInventory.do">inventory list</a></li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
 						data-toggle="dropdown" role="button" aria-haspopup="true"
 						aria-expanded="false">View/Edit <span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li class="active"><a class="bold" href="ViewProduct.do">view product</a></li>
+							<li class="active"><a class="bold" href="ViewProduct.do">view
+									product</a></li>
 							<li><a class="bold" href="AddProduct.do">add product</a></li>
 							<li><a class="bold" href="EditProduct.do">edit product</a></li>
 						</ul></li>
@@ -84,43 +84,46 @@
 								<option value="${item.ID}">Product ID: ${item.ID}</option>
 
 							</c:forEach>
-						</select> <br> <input type="submit" value="view product details" />
+						</select> <br> <button type="submit" value="view product details" class="btn btn-primary">view</button>
 
 					</form>
 
 				</div>
 			</div>
 
-<c:if test="${product.ID > 0}">
-			<table>
-				<tr>
-					<th class="spacing">Product ID</th>
-					<th class="spacing">Brand</th>
-					<th class="spacing">Type</th>
-					<th class="spacing">Size</th>
-					<th class="spacing">Batch Date</th>
-					<th class="spacing">Qty pr Carton</th>
-					<th class="spacing">Qty pr Pallet</th>
-				</tr>
-				<tr>
-					<td class="spacing">${product.ID}</td>
-					<td class="spacing">${product.brand}</td>
-					<td class="spacing">${product.type}</td>
-					<td class="spacing">${product.size}</td>
-					<td class="spacing">${product.batch}</td>
-					<td class="spacing">${product.qtyCarton}</td>
-					<td class="spacing">${product.qtyPallet}</td>
-				</tr>
-			</table>
+			<c:if test="${product.ID > 0}">
+				<table>
+					<tr>
+						<th class="spacing">Product ID</th>
+						<th class="spacing">Brand</th>
+						<th class="spacing">Type</th>
+						<th class="spacing">Size</th>
+						<th class="spacing">Batch Date</th>
+						<th class="spacing">Qty pr Carton</th>
+						<th class="spacing">Qty pr Pallet</th>
+					</tr>
+					<tr>
+						<td class="spacing">${product.ID}</td>
+						<td class="spacing">${product.brand}</td>
+						<td class="spacing">${product.type}</td>
+						<td class="spacing">${product.size}</td>
+						<td class="spacing">${product.batch}</td>
+						<td class="spacing">${product.qtyCarton}</td>
+						<td class="spacing">${product.qtyPallet}</td>
+					</tr>
+				</table>
+			<div class="image">
+				<img src="images/${product.image}" alt="product image">
+			</div>
 			</c:if>
 		</div>
 
-			<!-- /container -->
-			<!-- jQuery first, then Bootstrap JS. -->
-			<script
-				src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-			<script
-				src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<!-- /container -->
+		<!-- jQuery first, then Bootstrap JS. -->
+		<script
+			src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script
+			src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 
 <!-- Footer -->
