@@ -67,7 +67,7 @@ public class ProductDAOImpl implements ProductDAO {
 	@Override
 	public void addProduct(Product newProd) {
 		Product p = new Product();
-		p.setID(inventory.size()+1);
+		p.setID(inventory.get(inventory.size()-1).getID()+1);
 		p.setBrand(newProd.getBrand());
 		p.setType(newProd.getType());
 		p.setSize(newProd.getSize());

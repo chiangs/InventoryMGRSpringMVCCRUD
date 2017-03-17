@@ -65,11 +65,28 @@ public class ProductController {
 	@RequestMapping(path = "AddProductData.do", method = RequestMethod.POST)
 	public ModelAndView addByID(Product prodToAdd) {
 		ModelAndView mv = new ModelAndView();
-//		prodToAdd.setID(productService.getInventory().get(productService.getInventory().size()-1).getID()+1);
 		productService.addProduct(prodToAdd);
 		mv.addObject("inventory", productService.getInventory());
 		mv.setViewName("viewInventory");
 		return mv;
 	}
+	
+	@RequestMapping(path = "DeleteProduct.do", method = RequestMethod.GET)
+	public ModelAndView viewDelete() {
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("inventory", productService.getInventory());
+		mv.setViewName("deleteProduct");
+		return mv;
+	}
+	
+	@RequestMapping(path = "DeleteProductData.do", method = RequestMethod.POST)
+	public ModelAndView viewDelete(@RequestParam("ID")String id) {
+		ModelAndView mv = new ModelAndView();
+		productService.deleteProduct(Integer.parseInt(id));
+		mv.addObject("inventory", productService.getInventory());
+		mv.setViewName("viewInventory");
+		return mv;
+	}
+	
 }
 	
