@@ -14,7 +14,7 @@ import data.ProductDAO;
 import services.ProductService;
 
 @Controller
-@SessionAttributes({ "inventory", "product" })
+@SessionAttributes({ "inventory" })
 public class ProductController {
 
 	@ModelAttribute("product")

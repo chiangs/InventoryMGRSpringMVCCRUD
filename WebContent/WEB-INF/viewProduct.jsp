@@ -55,13 +55,13 @@
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav navbar-right">
-					<li class="active"><a class="bold" href="GetInventory.do">inventory
+					<li><a class="bold" href="GetInventory.do">inventory
 							list</a></li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
 						data-toggle="dropdown" role="button" aria-haspopup="true"
 						aria-expanded="false">View/Edit <span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a class="bold" href="ViewProduct.do">view product</a></li>
+							<li class="active"><a class="bold" href="ViewProduct.do">view product</a></li>
 							<li><a class="bold" href="AddProduct.do">add product</a></li>
 							<li><a class="bold" href="EditProduct.do">edit product</a></li>
 						</ul></li>
@@ -84,13 +84,14 @@
 								<option value="${item.ID}">Product ID: ${item.ID}</option>
 
 							</c:forEach>
-						</select> <br> <input type="submit" value="submit" />
+						</select> <br> <input type="submit" value="view product details" />
 
 					</form>
 
 				</div>
 			</div>
 
+<c:if test="${product.ID > 0}">
 			<table>
 				<tr>
 					<th class="spacing">Product ID</th>
@@ -111,6 +112,8 @@
 					<td class="spacing">${product.qtyPallet}</td>
 				</tr>
 			</table>
+			</c:if>
+		</div>
 
 			<!-- /container -->
 			<!-- jQuery first, then Bootstrap JS. -->
@@ -118,7 +121,6 @@
 				src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 			<script
 				src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		</div>
 </body>
 
 <!-- Footer -->
