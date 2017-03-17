@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -80,7 +81,7 @@
 				<div class="well">
 					<div class="editForm">
 
-						<form action="EditProductData.do" method="POST">
+						<form:form action="EditProductData.do" method="POST" modelAttribute="product">
 							<select name="ID">
 								<c:forEach var="item" items="${inventory}">
 									<c:choose>
@@ -93,23 +94,24 @@
 										</c:otherwise>
 									</c:choose>
 								</c:forEach>
+							</select> 
+							<br>
 
-
-							</select> <br> <input type="text" name="brand"
-								value="${product.brand}" class="editField" placeholder="Brand" /><br> <input
-								type="text" name="type" class="editField" value="${product.type}"
-								placeholder="Lemon/Sparkling/Still" /><br> <input
-								type="text" name="size" class="editField" value="${product.size}"
-								placeholder="Bottle Size in cl" /><br> <input type="text"
-								name="batch" class="editField" value="${product.batch}"
-								placeholder="Batch Date (YYYY-Mmm)" /><br> <input
-								type="text" name="qtyCarton" class="editField" value="${product.qtyCarton}"
-								placeholder="Qty Bottles / Carton" /><br> <input
-								type="text" name="qtyPallet" class="editField" value="${product.qtyPallet}"
-								placeholder="Qty Bottles / Pallet" /> <br> 
+							<form:input type="text" path="brand" class="editField" value="${product.brand}" placeholder="Brand" />
+							<form:errors path="brand" /><br> 
+							<form:input type="text" path="type" class="editField" value="${product.type}" placeholder="Lemon/Sparkling/Still" />
+							<form:errors path="type" /><br> 
+							<form:input type="text" path="size" class="editField" value="${product.size}" placeholder="Bottle Size in cl" />
+							<form:errors path="size" /><br> 
+							<form:input type="text" path="batch" class="editField" value="${product.batch}" placeholder="Batch Date (YYYY-Mmm)" />
+							<form:errors path="batch" /><br> 
+							<form:input type="text" path="qtyCarton" class="editField" value="${product.qtyCarton}" placeholder="Qty Bottles / Carton" />
+							<form:errors path="qtyCarton" /><br> 
+							<form:input type="text" path="qtyPallet" class="editField" value="${product.qtyPallet}" placeholder="Qty Bottles / Pallet" />
+							<form:errors path="qtyPallet" /><br> 
 							<button type="submit" value="submit" class="btn btn-primary">submit</button>
 
-						</form>
+						</form:form>
 					</div>
 				</div>
 			</div>

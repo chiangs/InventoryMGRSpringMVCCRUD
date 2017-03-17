@@ -56,11 +56,16 @@ public class ProductController {
 	}
 
 	@RequestMapping(path = "EditProductData.do", method = RequestMethod.POST)
-	public ModelAndView editByID(Product prodToEdit) {
+	public ModelAndView editByID(@Valid Product product, Errors errors) {
 		ModelAndView mv = new ModelAndView();
-		mv.addObject("inventory", productService.editProduct(prodToEdit));
-		mv.setViewName("viewInventory");
-		return mv;
+		if (errors.getErrorCount() != 0 ) {
+			mv.setViewName("editProduct");
+			return mv;
+		} else {
+			mv.addObject("inventory", productService.editProduct(product));
+			mv.setViewName("viewInventory");
+			return mv;			
+		}
 	}
 
 	@RequestMapping(path = "AddProduct.do", method = RequestMethod.GET)
