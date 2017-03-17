@@ -22,7 +22,7 @@ public class ProductDAOImpl implements ProductDAO {
 	 * The @PostConstruct method is called by Spring after object creation and
 	 * dependency injection
 	 */
-	
+
 	@PostConstruct
 	public void init() {
 		// Retrieve an input stream from the servlet context
@@ -70,16 +70,26 @@ public class ProductDAOImpl implements ProductDAO {
 	}
 
 	@Override
-	public Product editProduct(Product prod) {
+	public List<Product> editProduct(Product prod) {
+
 		int index = 0;
 		for (Product product : inventory) {
-			if(product.getID()==prod.getID()){
+			if (product.getID() == prod.getID()) {
 				index = inventory.indexOf(product);
 				break;
 			}
 		}
-		inventory.set(index, prod);
-		return inventory.get(index);
+		Product p = inventory.get(index);
+		p.setBrand(prod.getBrand());
+		p.setType(prod.getType());
+		p.setSize(prod.getSize());
+		p.setBatch(prod.getBatch());
+		p.setQtyCarton(prod.getQtyCarton());
+		p.setQtyPallet(prod.getQtyPallet());
+		for (Product product : inventory) {
+			System.out.println(product);
+		}
+		return inventory;
 	}
 
 	@Override

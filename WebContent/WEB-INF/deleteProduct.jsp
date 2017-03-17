@@ -64,7 +64,19 @@
 
     <!--Begin Content-->
 
+<div class="deleteForm">
 
+
+			<form action="DeleteProductData.do" method="POST">
+				<select name="ID">
+					<c:forEach var="item" items="${inventory}">
+
+						<option value="${item.ID}">Product ID: ${item.ID}</option>
+
+					</c:forEach>
+
+			</form>
+		</div>
 
         <!-- /container -->
         <!-- jQuery first, then Bootstrap JS. -->

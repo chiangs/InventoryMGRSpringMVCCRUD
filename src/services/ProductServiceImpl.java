@@ -29,7 +29,7 @@ public class ProductServiceImpl implements ProductService {
 	}
 
 	@Override
-	public Product editProduct(Product prod) {
+	public List<Product> editProduct(Product prod) {
 		return productDAO.editProduct(prod);
 	}
 

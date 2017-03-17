@@ -38,14 +38,6 @@ public class ProductController {
 		return mv;
 	}
 
-	@RequestMapping(path = "GetProductData.do", params = "id", method = RequestMethod.GET)
-	public ModelAndView getByID(@RequestParam("id") int id) {
-		ModelAndView mv = new ModelAndView();
-		mv.setViewName("viewProduct");
-		mv.addObject("product", productService.getProduct(id));
-		return mv;
-	}
-
 	@RequestMapping(path = "EditProduct.do", method = RequestMethod.GET)
 	public ModelAndView viewEdit() {
 		ModelAndView mv = new ModelAndView();
@@ -56,31 +48,10 @@ public class ProductController {
 
 	@RequestMapping(path = "EditProductData.do", method = RequestMethod.POST)
 	public ModelAndView editByID(Product prodToEdit) {
-		System.out.println(prodToEdit);
-		productService.editProduct(prodToEdit);
 		ModelAndView mv = new ModelAndView();
-//		mv.setViewName("editProduct");
-//		mv.addObject("product", productService.editProduct(prodToEdit));
-		mv.addObject("inventory", productService.getInventory());
+		mv.addObject("inventory", productService.editProduct(prodToEdit));
 		mv.setViewName("viewInventory");
 		return mv;
 	}
-
-	@RequestMapping(path = "DeleteProduct.do", params = "id", method = RequestMethod.POST)
-	public ModelAndView deleteByID(@RequestParam("id") int id) {
-		ModelAndView mv = new ModelAndView();
-		mv.setViewName("deleteProduct");
-		productService.deleteProduct(id);
-		return mv;
-	}
-
-	@RequestMapping(path = "AddProduct.do", params = "product", method = RequestMethod.POST)
-	public ModelAndView addProduct(Product newProd) {
-		newProd.setID(productService.getInventory().get(productService.getInventory().size()-1).getID()+1);
-		ModelAndView mv = new ModelAndView();
-		mv.setViewName("addProduct");
-		productService.addProduct(newProd);
-		return mv;
-	} // Unable to add product with ID of previously deleted
-
 }
+	

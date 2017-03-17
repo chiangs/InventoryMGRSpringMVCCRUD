@@ -82,7 +82,6 @@
 				<select name="ID">
 					<c:forEach var="item" items="${inventory}">
 
-						</label>
 						<option value="${item.ID}">Product ID: ${item.ID}</option>
 
 					</c:forEach>

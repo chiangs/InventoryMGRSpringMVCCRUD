@@ -1,9 +1,9 @@
-.editForm {
+.addForm {
     padding-top: 50px;
     margin:0 auto;
     text-align: center;
 }
 
-.editForm > input{
+.addForm > input{
 	width: 5vw;
 }

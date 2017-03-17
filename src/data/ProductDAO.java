@@ -6,7 +6,7 @@ public interface ProductDAO {
 	public List<Product> getInventory();
 	public Product getProduct(int ID);
 	public void addProduct(Product newProd);
-	public Product editProduct(Product prod);
+	public List<Product> editProduct(Product prod);
 	public void deleteProduct(Product prod);
 	
 	
