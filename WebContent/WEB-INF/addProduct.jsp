@@ -58,7 +58,7 @@
 						data-toggle="dropdown" role="button" aria-haspopup="true"
 						aria-expanded="false">View/Edit <span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a class="bold" href="GetProductData.do">view
+							<li><a class="bold" href="ViewProduct.do">view
 									product</a></li>
 							<li><a class="bold" href="AddProduct.do">add product</a></li>
 							<li><a class="bold" href="EditProduct.do">edit product</a></li>

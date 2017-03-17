@@ -88,5 +88,13 @@ public class ProductController {
 		return mv;
 	}
 	
+	@RequestMapping(path = "ViewProduct.do", method = RequestMethod.GET)
+	public ModelAndView viewProduct() {
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("inventory", productService.getInventory());
+		mv.setViewName("viewProduct");
+		return mv;
+	}
+	
 }
 	
