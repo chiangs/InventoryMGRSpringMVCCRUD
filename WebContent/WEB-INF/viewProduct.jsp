@@ -22,6 +22,7 @@
 	href="https://fonts.googleapis.com/css?family=Raleway:500,900|Quicksand"
 	rel="stylesheet">
 <link rel="stylesheet" href="styles/main.css">
+<link rel="stylesheet" href="styles/viewStyles.css">
 
 <!-- jQuery -->
 <script type="text/javascript"
@@ -76,19 +77,40 @@
 			<div class="heading">
 				<h1>View Product by ID#</h1>
 				<div class="well">
-					<form action="DeleteProductData.do" method="POST">
-				<select name="ID">
-					<c:forEach var="item" items="${inventory}">
+					<form action="ViewProductData.do" method="POST">
+						<select name="ID">
+							<c:forEach var="item" items="${inventory}">
 
-						<option value="${item.ID}">Product ID: ${item.ID}</option>
+								<option value="${item.ID}">Product ID: ${item.ID}</option>
 
-					</c:forEach>
-				</select> <br><input type="submit" value="submit" />
+							</c:forEach>
+						</select> <br> <input type="submit" value="submit" />
 
-			</form>
+					</form>
 
 				</div>
 			</div>
+
+			<table>
+				<tr>
+					<th class="spacing">Product ID</th>
+					<th class="spacing">Brand</th>
+					<th class="spacing">Type</th>
+					<th class="spacing">Size</th>
+					<th class="spacing">Batch Date</th>
+					<th class="spacing">Qty pr Carton</th>
+					<th class="spacing">Qty pr Pallet</th>
+				</tr>
+				<tr>
+					<td class="spacing">${product.ID}</td>
+					<td class="spacing">${product.brand}</td>
+					<td class="spacing">${product.type}</td>
+					<td class="spacing">${product.size}</td>
+					<td class="spacing">${product.batch}</td>
+					<td class="spacing">${product.qtyCarton}</td>
+					<td class="spacing">${product.qtyPallet}</td>
+				</tr>
+			</table>
 
 			<!-- /container -->
 			<!-- jQuery first, then Bootstrap JS. -->

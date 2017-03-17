@@ -96,5 +96,13 @@ public class ProductController {
 		return mv;
 	}
 	
+	@RequestMapping(path = "ViewProductData.do", method = RequestMethod.POST)
+	public ModelAndView viewProduct(@RequestParam("ID")String id) {
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("product", productService.getProduct(Integer.parseInt(id)));
+		mv.setViewName("viewProduct");
+		return mv;
+	}
+	
 }
 	

@@ -1,0 +1,14 @@
+table tr {
+	width: 100%;
+	text-align: center;
+}
+
+table th {
+    font-weight: bold;
+    padding-left: 50px;
+
+}
+
+table td {
+	text-align:right;
+}
