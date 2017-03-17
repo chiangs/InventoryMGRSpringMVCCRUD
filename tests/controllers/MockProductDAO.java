@@ -13,11 +13,12 @@ public class MockProductDAO implements ProductDAO {
 		inventory = new ArrayList<>();
 		loadInventory();
 	}
-	
+	//	public Product(int iD, String brand, String type, String size, String batch, String qtyCarton, String qtyPallet, String image) {
+
 	public void loadInventory() {
 		inventory.clear();
-		inventory.add(new Product(1,"Iskilde","still",33,"2015-Jan",12,1596));
-		inventory.add(new Product(2,"Iskilde","still",67,"2016-Jan",12,1596));
+		inventory.add(new Product(1,"Iskilde","still","33","2015-Jan","12","1596","/images/image.jpg"));
+		inventory.add(new Product(2,"Iskilde","still","67","2016-Jan","12","1596","/images/image.jpg"));
 	}
 
 	@Override
@@ -44,7 +45,7 @@ public class MockProductDAO implements ProductDAO {
 	}
 
 	@Override
-	public Product editProduct(Product prod) {
+	public List<Product> editProduct(Product prod) {
 		// TODO Auto-generated method stub
 		return null;
 	}

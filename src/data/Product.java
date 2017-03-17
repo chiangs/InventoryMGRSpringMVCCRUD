@@ -20,7 +20,7 @@ public class Product {
 	private String qtyPallet;
 	private String image;
 	
-	public Product(){}
+	public Product() {}
 
 	public int getID() {
 		return ID;
