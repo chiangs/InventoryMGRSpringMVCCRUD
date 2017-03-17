@@ -35,10 +35,10 @@ public class ProductDAOImpl implements ProductDAO {
 				int id = Integer.parseInt(tokens[0]);
 				String brand = tokens[1];
 				String type = tokens[2];
-				int size = Integer.parseInt(tokens[3]);
+				String size = tokens[3];
 				String batch = tokens[4];
-				int qtyCarton = Integer.parseInt(tokens[5]);
-				int qtyPallet = Integer.parseInt(tokens[6]);
+				String qtyCarton = tokens[5];
+				String qtyPallet = tokens[6];
 				inventory.add(new Product(id, brand, type, size, batch, qtyCarton, qtyPallet));
 			}
 		} catch (Exception e) {

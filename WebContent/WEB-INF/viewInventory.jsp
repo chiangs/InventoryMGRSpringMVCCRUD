@@ -60,8 +60,7 @@
 						data-toggle="dropdown" role="button" aria-haspopup="true"
 						aria-expanded="false">View/Edit <span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a class="bold" href="ViewProduct.do">view
-									product</a></li>
+							<li><a class="bold" href="ViewProduct.do">view product</a></li>
 							<li><a class="bold" href="AddProduct.do">add product</a></li>
 							<li><a class="bold" href="EditProduct.do">edit product</a></li>
 						</ul></li>
@@ -96,6 +95,14 @@
 							<td class="spacing">${item.batch}</td>
 							<td class="spacing">${item.qtyCarton}</td>
 							<td class="spacing">${item.qtyPallet}</td>
+							<td><%-- <form action="EditProduct.do" method="GET">
+								<select name="ID">
+										<option value="${item.ID}">Product ID: ${item.ID}</option>
+								</select> <input type="submit" value="Edit" />
+
+							</form> --%>
+							<a href="EditProduct.do?ID=${item.ID}">Edit</a>
+							</td>
 						</tr>
 					</c:forEach>
 				</table>

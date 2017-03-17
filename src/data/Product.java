@@ -4,10 +4,10 @@ public class Product {
 	private int ID;
 	private String brand;
 	private String type;
-	private int size;
+	private String size;
 	private String batch;
-	private int qtyCarton;
-	private int qtyPallet;
+	private String qtyCarton;
+	private String qtyPallet;
 	
 	public Product(){}
 
@@ -35,11 +35,11 @@ public class Product {
 		this.type = type;
 	}
 
-	public int getSize() {
+	public String getSize() {
 		return size;
 	}
 
-	public void setSize(int size) {
+	public void setSize(String size) {
 		this.size = size;
 	}
 
@@ -51,23 +51,23 @@ public class Product {
 		this.batch = batch;
 	}
 
-	public int getQtyCarton() {
+	public String getQtyCarton() {
 		return qtyCarton;
 	}
 
-	public void setQtyCarton(int qtyCarton) {
+	public void setQtyCarton(String qtyCarton) {
 		this.qtyCarton = qtyCarton;
 	}
 
-	public int getQtyPallet() {
+	public String getQtyPallet() {
 		return qtyPallet;
 	}
 
-	public void setQtyPallet(int qtyPallet) {
+	public void setQtyPallet(String qtyPallet) {
 		this.qtyPallet = qtyPallet;
 	}
 
-	public Product(int iD, String brand, String type, int size, String batch, int qtyCarton, int qtyPallet) {
+	public Product(int iD, String brand, String type, String size, String batch, String qtyCarton, String qtyPallet) {
 		super();
 		ID = iD;
 		this.brand = brand;

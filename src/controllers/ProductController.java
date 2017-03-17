@@ -39,8 +39,13 @@ public class ProductController {
 	}
 
 	@RequestMapping(path = "EditProduct.do", method = RequestMethod.GET)
-	public ModelAndView viewEdit() {
+	public ModelAndView viewEdit(Integer ID) {
+		System.out.println("viewEdit():" + ID);
 		ModelAndView mv = new ModelAndView();
+		if (ID != null) {
+			Product p = productService.getProduct(ID);
+			mv.addObject("product",p);
+		}
 		mv.addObject("inventory", productService.getInventory());
 		mv.setViewName("editProduct");
 		return mv;

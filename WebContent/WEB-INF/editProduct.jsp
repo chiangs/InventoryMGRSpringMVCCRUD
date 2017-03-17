@@ -61,10 +61,10 @@
 						data-toggle="dropdown" role="button" aria-haspopup="true"
 						aria-expanded="false">View/Edit <span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a class="bold" href="ViewProduct.do">view
-									product</a></li>
+							<li><a class="bold" href="ViewProduct.do">view product</a></li>
 							<li><a class="bold" href="AddProduct.do">add product</a></li>
-							<li class="active"><a class="bold" href="EditProduct.do">edit product</a></li>
+							<li class="active"><a class="bold" href="EditProduct.do">edit
+									product</a></li>
 						</ul></li>
 					<li><a class="bold" href="DeleteProduct.do">delete product</a></li>
 					<li><a class="bold" href="contact.html">contact</a></li>
@@ -77,20 +77,26 @@
 
 		<div class="editForm">
 
-
 			<form action="EditProductData.do" method="POST">
 				<select name="ID">
 					<c:forEach var="item" items="${inventory}">
-
-						<option value="${item.ID}">Product ID: ${item.ID}</option>
-
+						<c:choose>
+							<c:when test="${product != null && product.ID == item.ID}">
+								<option value="${item.ID}" selected>Product ID: ${item.ID}</option>
+							</c:when>
+							<c:otherwise>
+								<option value="${item.ID}">Product ID: ${item.ID}</option>
+							</c:otherwise>
+						</c:choose>
 					</c:forEach>
-				</select> <br> <input type="text" name="brand" value="Enter Brand Name" /><br>
-				<input type="text" name="type" value="Still/Sparkling/Lemon" /><br>
-				<input type="text" name="size" value="Bottle Size" /><br> <input
-					type="text" name="batch" value="Batch Date (YYYY-Mmm)" /><br>
-				<input type="text" name="qtyCarton" value="Qty Bottles / Carton" /><br>
-				<input type="text" name="qtyPallet" value="Qty Bottles / Pallet" />
+
+
+				</select> <br> <input type="text" name="brand" value="${product.brand}" placeholder="Brand"/><br>
+				<input type="text" name="type" value="${product.type}" placeholder="Lemon/Sparkling/Still" /><br>
+				<input type="text" name="size" value="${product.size}" placeholder="Bottle Size in cl"/><br> <input
+					type="text" name="batch" value="${product.batch}" placeholder="Batch Date (YYYY-Mmm)" /><br>
+				<input type="text" name="qtyCarton" value="${product.qtyCarton}" placeholder="Qty Bottles / Carton" /><br>
+				<input type="text" name="qtyPallet" value="${product.qtyPallet}" placeholder="Qty Bottles / Pallet" />
 				<br> <input type="submit" value="submit" />
 
 			</form>
