@@ -21,39 +21,37 @@ public class MockProductDAO implements ProductDAO {
 	}
 
 	@Override
-	public List<Product> displayInventory() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Product> getInventory() {
+		List<Product> userInv = new ArrayList<>(inventory);
+		return userInv;
 	}
 
 	@Override
-	public Product displayProduct(int ID) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Product getProductByID() {
-		// TODO Auto-generated method stub
-		return null;
+	public Product getProduct(int ID) {
+		Product p = null;
+		for (Product product : inventory) {
+			if (product.getID() == ID) {
+				p = product;
+				break;
+			}
+		}
+		return p;
 	}
 
 	@Override
 	public void addProduct(Product newProd) {
-		// TODO Auto-generated method stub
-		
+		inventory.add(newProd);
 	}
 
 	@Override
-	public Product editProduct(int ID) {
+	public Product editProduct(Product prod) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void deleteProduct(int ID) {
-		// TODO Auto-generated method stub
-		
+	public void deleteProduct(Product prod) {
+		inventory.remove(prod);
 	}
 
 }

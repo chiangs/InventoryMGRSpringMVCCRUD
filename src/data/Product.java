@@ -8,6 +8,8 @@ public class Product {
 	private String batch;
 	private int qtyCarton;
 	private int qtyPallet;
+	
+	public Product(){}
 
 	public int getID() {
 		return ID;

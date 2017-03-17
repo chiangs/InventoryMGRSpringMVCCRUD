@@ -8,46 +8,34 @@ import data.ProductDAO;
 public class ProductServiceImpl implements ProductService {
 	private ProductDAO productDAO;
 
+	public void setProductDAO(ProductDAO productDAO) {
+		this.productDAO = productDAO;
+	}
+
+
 	@Override
-	public List<Product> loadInventory() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Product> getInventory() {
+		return productDAO.getInventory();
 	}
 
 	@Override
-	public List<Product> displayInventory() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Product displayProduct(int ID) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Product getProductByID() {
-		// TODO Auto-generated method stub
-		return null;
+	public Product getProduct(int ID) {
+		return productDAO.getProduct(ID);
 	}
 
 	@Override
 	public void addProduct(Product newProd) {
-		// TODO Auto-generated method stub
-		
+		productDAO.addProduct(newProd);
 	}
 
 	@Override
-	public Product editProduct(int ID) {
-		// TODO Auto-generated method stub
-		return null;
+	public Product editProduct(Product prod) {
+		return productDAO.editProduct(prod);
 	}
 
 	@Override
 	public void deleteProduct(int ID) {
-		// TODO Auto-generated method stub
-		
+		Product p = productDAO.getProduct(ID);
+		productDAO.deleteProduct(p);
 	}
-
 }

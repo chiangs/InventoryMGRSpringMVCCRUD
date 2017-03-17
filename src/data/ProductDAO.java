@@ -3,13 +3,11 @@ package data;
 import java.util.List;
 
 public interface ProductDAO {
-	public void loadInventory();
-	public List<Product> displayInventory();
-	public Product displayProduct(int ID);
-	public Product getProductByID();
+	public List<Product> getInventory();
+	public Product getProduct(int ID);
 	public void addProduct(Product newProd);
-	public Product editProduct(int ID);
-	public void deleteProduct(int ID);
+	public Product editProduct(Product prod);
+	public void deleteProduct(Product prod);
 	
 	
 	// getProductsByType

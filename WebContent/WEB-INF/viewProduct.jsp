@@ -25,7 +25,7 @@
             console.log("ready!");
         });
     </script>
-<title>Inventory List/title>
+<title>View Product</title>
 </head>
 <body>
 <div class="index-main">
@@ -46,15 +46,16 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a class="bold" href="viewInventory.jsp">inventory list</a></li>
+                    <li class="active"><a class="bold" href="GetInventory.do">inventory list</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">View/Edit <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a class="bold" href="WEB-INF/viewProduct.jsp">view product</a></li>
-                            <li><a class="bold" href="WEB-INF/addProduct.jsp">add product</a></li>
-                            <li><a class="bold" href="WEB-INF/editProduct.jsp">edit product</a></li>
+                            <li><a class="bold" href="ViewProduct.do">view product</a></li>
+                            <li><a class="bold" href="AddProduct.do">add product</a></li>
+                            <li><a class="bold" href="EditProduct.do">edit product</a></li>
                         </ul>
                     </li>
+                    <li><a class="bold" href="DeleteProduct.do">delete product</a></li>
                     <li><a class="bold" href="contact.html">contact</a></li>
                 </ul>
             </div>
@@ -62,6 +63,22 @@
     </nav>
 
     <!--Begin Content-->
+    <div class="container">
+        <div class="heading">
+            <h1>View Product by ID#</h1>
+        </div>
+        <div class="forms">
+            <form action="GetProductData.do" method="GET">
+                ID#:
+                <input type="text" name="id"/>
+                <input type="submit" value="Get Product Data" />
+            </form>
+        </div>
+
+        <div class="showProd">
+
+        </div>
+    </div>
 
 
 
