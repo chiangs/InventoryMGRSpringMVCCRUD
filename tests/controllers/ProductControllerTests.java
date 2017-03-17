@@ -27,12 +27,11 @@ import org.springframework.web.servlet.ModelAndView;
 
 import data.Product;
 
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = { "ProductControllerTests-context.xml" })
+@WebAppConfiguration
 public class ProductControllerTests {
 
-	@RunWith(SpringJUnit4ClassRunner.class)
-	@ContextConfiguration(locations = { "ProductControllerTests-context.xml" })
-	@WebAppConfiguration
-	public class StateControllerTests {
 		MockMvc mockMvc;
 
 		@Autowired
@@ -169,4 +168,3 @@ public class ProductControllerTests {
 //			
 //		}
 	}
-}

@@ -18,3 +18,8 @@ table td {
 .viewButton {
 	padding-left: 20px;
 }
+
+.addButtonTop {
+	position:fixed;
+	right:0;
+	}

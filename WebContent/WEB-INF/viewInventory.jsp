@@ -73,10 +73,20 @@
 
 		<!--Begin Content-->
 		<h1 class="center">Inventory List</h1>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="addButtonTop">
+					<form action="AddProduct.do" method="GET">
+						<button type="submit" name="ID" value="ID"
+							class="btn btn-md btn-success">add product</button>
+					</form>
+				</div>
+			</div>
+		</div>
 
 		<div class="container-fluid well">
 			<div id="inventoryList">
-				<table style="overflow-x:auto;">
+				<table style="overflow-x: auto;">
 					<tr>
 						<th class="spacing">Product ID</th>
 						<th class="spacing">Brand</th>
@@ -86,9 +96,9 @@
 						<th class="spacing">Qty pr Carton</th>
 						<th class="spacing">Qty pr Pallet</th>
 					</tr>
-					
+
 					<c:forEach var="item" items="${inventory}">
-						<tr>			
+						<tr>
 							<td class="spacing">${item.ID}</td>
 							<td class="spacing">${item.brand}</td>
 							<td class="spacing">${item.type}</td>
@@ -96,14 +106,22 @@
 							<td class="spacing">${item.batch}</td>
 							<td class="spacing">${item.qtyCarton}</td>
 							<td class="spacing">${item.qtyPallet}</td>
-							<td class="viewButton"><form action="ViewProduct.do?ID=${item.ID}" method="GET">
-								<button type="submit" name="ID" value="${item.ID}" class="btn btn-xs btn-primary">view</button></form></td>
-							<td class="editButton"><form action="EditProduct.do?ID=${item.ID}" method="GET">
-								<button type="submit" name="ID" value="${item.ID}" class="btn btn-xs btn-warning">edit</button></form></td>
-							<td class="deleteButton"><form action="DeleteProductData.do" method="POST">
-								<button type="submit" name="ID" value="${item.ID}" class="btn btn-xs btn-danger">delete</button>
-							</form></td>							
-						</tr>						
+							<td class="viewButton"><form
+									action="ViewProduct.do?ID=${item.ID}" method="GET">
+									<button type="submit" name="ID" value="${item.ID}"
+										class="btn btn-xs btn-primary">view</button>
+								</form></td>
+							<td class="editButton"><form
+									action="EditProduct.do?ID=${item.ID}" method="GET">
+									<button type="submit" name="ID" value="${item.ID}"
+										class="btn btn-xs btn-warning">edit</button>
+								</form></td>
+							<td class="deleteButton"><form action="DeleteProductData.do"
+									method="POST">
+									<button type="submit" name="ID" value="${item.ID}"
+										class="btn btn-xs btn-danger">delete</button>
+								</form></td>
+						</tr>
 					</c:forEach>
 				</table>
 			</div>
