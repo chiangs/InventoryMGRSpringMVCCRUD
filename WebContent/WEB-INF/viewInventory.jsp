@@ -95,10 +95,12 @@
 							<td class="spacing">${item.batch}</td>
 							<td class="spacing">${item.qtyCarton}</td>
 							<td class="spacing">${item.qtyPallet}</td>
+							<td class="viewButton"><form action="ViewProduct.do?ID=${item.ID}" method="GET">
+								<button type="submit" name="ID" value="${item.ID}" class="btn btn-xs btn-primary">view</button></form></td>
 							<td class="editButton"><form action="EditProduct.do?ID=${item.ID}" method="GET">
-								<button type="submit" name="ID" value="${item.ID}" class="btn-link">edit</button></form></td>
+								<button type="submit" name="ID" value="${item.ID}" class="btn btn-xs btn-warning">edit</button></form></td>
 							<td class="deleteButton"><form action="DeleteProductData.do" method="POST">
-								<button type="submit" name="ID" value="${item.ID}" class="btn-link">delete</button>
+								<button type="submit" name="ID" value="${item.ID}" class="btn btn-xs btn-danger">delete</button>
 							</form></td>
 						</tr>
 					</c:forEach>
