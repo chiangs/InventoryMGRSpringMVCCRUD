@@ -20,6 +20,7 @@
 	href="https://fonts.googleapis.com/css?family=Raleway:500,900|Quicksand"
 	rel="stylesheet">
 <link rel="stylesheet" href="styles/main.css">
+<link rel="stylesheet" href="styles/addStyles.css">
 
 <!-- jQuery -->
 <script type="text/javascript"
@@ -74,11 +75,11 @@
 
 
 			<form action="AddProductData.do" method="POST">
-
-				<br> <input type="text" name="brand" value="Enter Brand Name" /><br>
+				
+				</select> <br> <input type="text" name="brand" value="Enter Brand Name" /><br>
 				<input type="text" name="type" value="Still/Sparkling/Lemon" /><br>
-				<input type="text" name="size" value="Bottle Size" /><br> 
-				<input type="text" name="batch" value="Batch Date (YYYY-Mmm)" /><br>
+				<input type="text" name="size" value="Bottle Size" /><br> <input
+					type="text" name="batch" value="Batch Date (YYYY-Mmm)" /><br>
 				<input type="text" name="qtyCarton" value="Qty Bottles / Carton" /><br>
 				<input type="text" name="qtyPallet" value="Qty Bottles / Pallet" />
 				<br> <input type="submit" value="submit" />

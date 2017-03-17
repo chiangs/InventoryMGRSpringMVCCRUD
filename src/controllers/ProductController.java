@@ -53,5 +53,23 @@ public class ProductController {
 		mv.setViewName("viewInventory");
 		return mv;
 	}
+	
+	@RequestMapping(path = "AddProduct.do", method = RequestMethod.GET)
+	public ModelAndView viewAdd() {
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("inventory", productService.getInventory());
+		mv.setViewName("addProduct");
+		return mv;
+	}
+	
+	@RequestMapping(path = "AddProductData.do", method = RequestMethod.POST)
+	public ModelAndView addByID(Product prodToAdd) {
+		ModelAndView mv = new ModelAndView();
+//		prodToAdd.setID(productService.getInventory().get(productService.getInventory().size()-1).getID()+1);
+		productService.addProduct(prodToAdd);
+		mv.addObject("inventory", productService.getInventory());
+		mv.setViewName("viewInventory");
+		return mv;
+	}
 }
 	
