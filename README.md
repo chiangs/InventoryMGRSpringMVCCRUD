@@ -35,7 +35,9 @@ This web-app is my first attempt at using SpringMVC. I first wrote JUnit tests b
 - The **ProductIMSController** class is the controller and interacts with the **ProductDAOImpl** class which implements methods declared in the **ProductDAO** interface. The product and list objects are constructed using information from the **Product** class and accompanying .csv file pre-loaded with inventory information.
 - The **ProductIMSController** provides information back through **.jsp** files for the user to view and manipulate.
 
-<img src="WebContent/images/chart.png" height="400">
+<p align="center">
+<img src="WebContent/images/chart.png" height="350">
+</p>
 
 ## Code Examples
 **example of edit product controller code with form validation logic**
