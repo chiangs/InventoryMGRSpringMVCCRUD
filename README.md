@@ -52,4 +52,4 @@ This web-app is my first attempt at using SpringMVC. I first wrote JUnit tests b
 			mv.setViewName("viewInventory");
 			return mv;			
 		}
-	}```
+	}
