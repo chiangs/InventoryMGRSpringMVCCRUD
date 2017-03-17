@@ -96,18 +96,18 @@
 
 
 							</select> <br> <input type="text" name="brand"
-								value="${product.brand}" placeholder="Brand" /><br> <input
-								type="text" name="type" value="${product.type}"
+								value="${product.brand}" class="editField" placeholder="Brand" /><br> <input
+								type="text" name="type" class="editField" value="${product.type}"
 								placeholder="Lemon/Sparkling/Still" /><br> <input
-								type="text" name="size" value="${product.size}"
+								type="text" name="size" class="editField" value="${product.size}"
 								placeholder="Bottle Size in cl" /><br> <input type="text"
-								name="batch" value="${product.batch}"
+								name="batch" class="editField" value="${product.batch}"
 								placeholder="Batch Date (YYYY-Mmm)" /><br> <input
-								type="text" name="qtyCarton" value="${product.qtyCarton}"
+								type="text" name="qtyCarton" class="editField" value="${product.qtyCarton}"
 								placeholder="Qty Bottles / Carton" /><br> <input
-								type="text" name="qtyPallet" value="${product.qtyPallet}"
-								placeholder="Qty Bottles / Pallet" /> <br> <button
-								type="submit" value="submit" class="btn btn-primary">submit</button>
+								type="text" name="qtyPallet" class="editField" value="${product.qtyPallet}"
+								placeholder="Qty Bottles / Pallet" /> <br> 
+							<button type="submit" value="submit" class="btn btn-primary">submit</button>
 
 						</form>
 					</div>

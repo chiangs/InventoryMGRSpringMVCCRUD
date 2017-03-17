@@ -1,9 +1,9 @@
 .addForm {
     padding-top: 50px;
     margin:0 auto;
-    text-align: center;
+    text-align: left;
 }
 
-.addForm > input{
-	width: 5vw;
+.addField {
+	width: 30vw;
 }

@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -79,19 +81,30 @@
 					<div class="addForm">
 
 
-						<form action="AddProductData.do" method="POST">
+						<form:form action="AddProductData.do" method="POST" modelAttribute="product">
 
-							</select> <br> <input type="text" name="brand"
-								placeholder="Enter Brand Name" /><br> <input type="text"
-								name="type" placeholder="Still/Sparkling/Lemon" /><br> <input
-								type="text" name="size" placeholder="Bottle Size" /><br> <input
-								type="text" name="batch" placeholder="Batch Date (YYYY-Mmm)" /><br>
-							<input type="text" name="qtyCarton"
-								placeholder="Qty Bottles / Carton" /><br> <input
-								type="text" name="qtyPallet" placeholder="Qty Bottles / Pallet" />
-							<br> <button type="submit" value="submit" class="btn btn-primary">submit</button>
+							<br> 
+							<form:input type="text" path="brand" class="addField" placeholder="Enter Brand Name" />
+							  <form:errors path="brand" />
+							<br> 
+							<form:input type="text" path="type" class="addField" placeholder="Still/Sparkling/Lemon" />
+							<form:errors path="type" />
+							<br> 
+							<form:input type="text" path="size" class="addField" placeholder="Bottle Size" />
+							<form:errors path="size" />
+							<br> 
+							<form:input type="text" path="batch" class="addField" placeholder="Batch Date (YYYY-Mmm)" />
+							<form:errors path="batch" />
+							<br>
+							<form:input type="text" path="qtyCarton" class="addField" placeholder="Qty Bottles / Carton" />
+							<form:errors path="qtyCarton" />
+							<br> 
+							<form:input type="text" path="qtyPallet"  class="addField" placeholder="Qty Bottles / Pallet" />
+							<form:errors path="qtyPallet" />
+							<br>
+							<button type="submit" value="submit" class="btn btn-primary">submit</button>
 
-						</form>
+						</form:form>
 					</div>
 				</div>
 			</div>

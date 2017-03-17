@@ -1,11 +1,21 @@
 package data;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
 public class Product {
 	private int ID;
+	@Size(min=1, message="Please enter a brand")
 	private String brand;
+	@Size(min=1, message="Please enter a flavor e.g., still/sparkling/lemon")
 	private String type;
+	@Size(min=1, max=3, message="Size is in cl, no more than 3 digits")
 	private String size;
+	@Pattern(regexp="\\d{4}(-\\w{3})?", message="Must match YYYY-Mmm")
 	private String batch;
+	
 	private String qtyCarton;
 	private String qtyPallet;
 	private String image;

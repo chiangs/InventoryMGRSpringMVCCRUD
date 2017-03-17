@@ -86,8 +86,9 @@
 						<th class="spacing">Qty pr Carton</th>
 						<th class="spacing">Qty pr Pallet</th>
 					</tr>
+					
 					<c:forEach var="item" items="${inventory}">
-						<tr>
+						<tr>			
 							<td class="spacing">${item.ID}</td>
 							<td class="spacing">${item.brand}</td>
 							<td class="spacing">${item.type}</td>
@@ -101,8 +102,8 @@
 								<button type="submit" name="ID" value="${item.ID}" class="btn btn-xs btn-warning">edit</button></form></td>
 							<td class="deleteButton"><form action="DeleteProductData.do" method="POST">
 								<button type="submit" name="ID" value="${item.ID}" class="btn btn-xs btn-danger">delete</button>
-							</form></td>
-						</tr>
+							</form></td>							
+						</tr>						
 					</c:forEach>
 				</table>
 			</div>

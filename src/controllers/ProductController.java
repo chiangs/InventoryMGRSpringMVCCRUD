@@ -1,7 +1,11 @@
 package controllers;
 
+import javax.swing.plaf.synth.SynthSeparatorUI;
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -18,9 +22,10 @@ import services.ProductService;
 public class ProductController {
 
 	@ModelAttribute("product")
-	public Product pro(){
+	public Product pro() {
 		return new Product();
 	}
+
 	@Autowired
 	private ProductService productService;
 	// private MockProductDAO mockDAO;
@@ -43,7 +48,7 @@ public class ProductController {
 		ModelAndView mv = new ModelAndView();
 		if (ID != null) {
 			Product p = productService.getProduct(ID);
-			mv.addObject("product",p);
+			mv.addObject("product", p);
 		}
 		mv.addObject("inventory", productService.getInventory());
 		mv.setViewName("editProduct");
@@ -57,7 +62,7 @@ public class ProductController {
 		mv.setViewName("viewInventory");
 		return mv;
 	}
-	
+
 	@RequestMapping(path = "AddProduct.do", method = RequestMethod.GET)
 	public ModelAndView viewAdd() {
 		ModelAndView mv = new ModelAndView();
@@ -65,16 +70,21 @@ public class ProductController {
 		mv.setViewName("addProduct");
 		return mv;
 	}
-	
+
 	@RequestMapping(path = "AddProductData.do", method = RequestMethod.POST)
-	public ModelAndView addByID(Product prodToAdd) {
+	public ModelAndView addByID(@Valid Product product, Errors errors) {
 		ModelAndView mv = new ModelAndView();
-		productService.addProduct(prodToAdd);
-		mv.addObject("inventory", productService.getInventory());
-		mv.setViewName("viewInventory");
-		return mv;
+		if (errors.getErrorCount() != 0) {
+			mv.setViewName("addProduct");
+			return mv;
+		} else {
+			productService.addProduct(product);
+			mv.addObject("inventory", productService.getInventory());
+			mv.setViewName("viewInventory");
+			return mv;
+		}
 	}
-	
+
 	@RequestMapping(path = "DeleteProduct.do", method = RequestMethod.GET)
 	public ModelAndView viewDelete() {
 		ModelAndView mv = new ModelAndView();
@@ -82,35 +92,34 @@ public class ProductController {
 		mv.setViewName("deleteProduct");
 		return mv;
 	}
-	
+
 	@RequestMapping(path = "DeleteProductData.do", method = RequestMethod.POST)
-	public ModelAndView viewDelete(@RequestParam("ID")String id) {
+	public ModelAndView viewDelete(@RequestParam("ID") String id) {
 		ModelAndView mv = new ModelAndView();
 		productService.deleteProduct(Integer.parseInt(id));
 		mv.addObject("inventory", productService.getInventory());
 		mv.setViewName("viewInventory");
 		return mv;
 	}
-	
+
 	@RequestMapping(path = "ViewProduct.do", method = RequestMethod.GET)
 	public ModelAndView viewProduct(Integer ID) {
 		ModelAndView mv = new ModelAndView();
 		if (ID != null) {
 			Product p = productService.getProduct(ID);
-			mv.addObject("product",p);
+			mv.addObject("product", p);
 		}
 		mv.addObject("inventory", productService.getInventory());
 		mv.setViewName("viewProduct");
 		return mv;
 	}
-	
+
 	@RequestMapping(path = "ViewProductData.do", method = RequestMethod.POST)
-	public ModelAndView viewProduct(@RequestParam("ID")String id) {
+	public ModelAndView viewProduct(@RequestParam("ID") String id) {
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("product", productService.getProduct(Integer.parseInt(id)));
 		mv.setViewName("viewProduct");
 		return mv;
 	}
-	
+
 }
-	
