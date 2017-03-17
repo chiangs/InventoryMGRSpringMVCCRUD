@@ -41,8 +41,7 @@ This web-app is my first attempt at using SpringMVC. I first wrote JUnit tests b
 
 ## Code Examples
 **example of edit product controller code with form validation logic**
-```
-@RequestMapping(path = "EditProductData.do", method = RequestMethod.POST)
+```@RequestMapping(path = "EditProductData.do", method = RequestMethod.POST)
 	public ModelAndView editByID(@Valid Product product, Errors errors) {
 		ModelAndView mv = new ModelAndView();
 		if (errors.getErrorCount() != 0 ) {
@@ -53,5 +52,4 @@ This web-app is my first attempt at using SpringMVC. I first wrote JUnit tests b
 			mv.setViewName("viewInventory");
 			return mv;			
 		}
-	}
-    ```
+	}```
