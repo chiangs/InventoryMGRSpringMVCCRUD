@@ -95,14 +95,11 @@
 							<td class="spacing">${item.batch}</td>
 							<td class="spacing">${item.qtyCarton}</td>
 							<td class="spacing">${item.qtyPallet}</td>
-							<td><%-- <form action="EditProduct.do" method="GET">
-								<select name="ID">
-										<option value="${item.ID}">Product ID: ${item.ID}</option>
-								</select> <input type="submit" value="Edit" />
-
-							</form> --%>
-							<a href="EditProduct.do?ID=${item.ID}">Edit</a>
-							</td>
+							<td class="editButton"><form action="EditProduct.do?ID=${item.ID}" method="GET">
+								<button type="submit" name="ID" value="${item.ID}" class="btn-link">edit</button></form></td>
+							<td class="deleteButton"><form action="DeleteProductData.do" method="POST">
+								<button type="submit" name="ID" value="${item.ID}" class="btn-link">delete</button>
+							</form></td>
 						</tr>
 					</c:forEach>
 				</table>

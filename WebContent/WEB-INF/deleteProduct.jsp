@@ -75,9 +75,8 @@
 		<!--Begin Content-->
 
 		<div class="deleteForm">
-
-
-			<form action="DeleteProductData.do" method="POST">
+		
+					<form action="DeleteProductData.do" method="POST">
 				<select name="ID">
 					<c:forEach var="item" items="${inventory}">
 

@@ -40,7 +40,6 @@ public class ProductController {
 
 	@RequestMapping(path = "EditProduct.do", method = RequestMethod.GET)
 	public ModelAndView viewEdit(Integer ID) {
-		System.out.println("viewEdit():" + ID);
 		ModelAndView mv = new ModelAndView();
 		if (ID != null) {
 			Product p = productService.getProduct(ID);
