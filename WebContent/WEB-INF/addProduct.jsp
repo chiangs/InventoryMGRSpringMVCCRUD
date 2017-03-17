@@ -76,12 +76,12 @@
 
 			<form action="AddProductData.do" method="POST">
 				
-				</select> <br> <input type="text" name="brand" value="Enter Brand Name" /><br>
-				<input type="text" name="type" value="Still/Sparkling/Lemon" /><br>
-				<input type="text" name="size" value="Bottle Size" /><br> <input
-					type="text" name="batch" value="Batch Date (YYYY-Mmm)" /><br>
-				<input type="text" name="qtyCarton" value="Qty Bottles / Carton" /><br>
-				<input type="text" name="qtyPallet" value="Qty Bottles / Pallet" />
+				</select> <br> <input type="text" name="brand" placeholder="Enter Brand Name" /><br>
+				<input type="text" name="type" placeholder="Still/Sparkling/Lemon" /><br>
+				<input type="text" name="size" placeholder="Bottle Size" /><br> <input
+					type="text" name="batch" placeholder="Batch Date (YYYY-Mmm)" /><br>
+				<input type="text" name="qtyCarton" placeholder="Qty Bottles / Carton" /><br>
+				<input type="text" name="qtyPallet" placeholder="Qty Bottles / Pallet" />
 				<br> <input type="submit" value="submit" />
 
 			</form>
