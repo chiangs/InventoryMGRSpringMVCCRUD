@@ -1,6 +1,5 @@
 package controllers;
 
-import javax.swing.plaf.synth.SynthSeparatorUI;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,11 +27,10 @@ public class ProductController {
 
 	@Autowired
 	private ProductService productService;
-	// private MockProductDAO mockDAO;
-	private ProductDAO dao;
+	private ProductDAO mockDAO;
 
 	public void setDao(ProductDAO dao) {
-		this.dao = dao;
+		this.mockDAO = dao;
 	}
 
 	@RequestMapping(path = "GetInventory.do", method = RequestMethod.GET)
@@ -40,14 +38,17 @@ public class ProductController {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("viewInventory");
 		mv.addObject("inventory", productService.getInventory());
+//		mv.addObject("inventory", mockDAO.getInventory());
 		return mv;
 	}
 
 	@RequestMapping(path = "EditProduct.do", method = RequestMethod.GET)
 	public ModelAndView viewEdit(Integer ID) {
 		ModelAndView mv = new ModelAndView();
+		System.out.println(ID);
 		if (ID != null) {
 			Product p = productService.getProduct(ID);
+//			Product p = mockDAO.getProduct(ID);
 			mv.addObject("product", p);
 		}
 		mv.addObject("inventory", productService.getInventory());
@@ -114,6 +115,7 @@ public class ProductController {
 			Product p = productService.getProduct(ID);
 			mv.addObject("product", p);
 		}
+//		mv.addObject("inventory", productService.getInventory());
 		mv.addObject("inventory", productService.getInventory());
 		mv.setViewName("viewProduct");
 		return mv;

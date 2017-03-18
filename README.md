@@ -3,6 +3,8 @@ An inventory management web-app using Java and the Spring MVC framework with CRU
 
 This web-app is my first attempt at using SpringMVC. I first wrote JUnit tests but ran into an odd problem where the IDE didn't detect any test cases which I'll attempt to resolve before zipping into .war and deploying to AWS. I then proceeded to fill out methods that resulted in output via Java Server Pages with html/css/bootstrap. I provided the user the ability to manipulate data in many ways but also attempted to engineer limits to prevent misuse of the app. By and large, the web-app is mobile friendly with a toggling hamburger menu, however the data table needs a little work.
 
+(Side note: JUnit tests are somewhat working but require a lot of commenting out in substitute for the mockDAO lines)
+
 <p align="center">
 <img src="WebContent/images/screen1.png" height="245">
 <img src="WebContent/images/screen2.png" height="245"></p>

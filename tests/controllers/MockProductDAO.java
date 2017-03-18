@@ -13,10 +13,8 @@ public class MockProductDAO implements ProductDAO {
 		inventory = new ArrayList<>();
 		loadInventory();
 	}
-	//	public Product(int iD, String brand, String type, String size, String batch, String qtyCarton, String qtyPallet, String image) {
 
 	public void loadInventory() {
-		inventory.clear();
 		inventory.add(new Product(1,"Iskilde","still","33","2015-Jan","12","1596","/images/image.jpg"));
 		inventory.add(new Product(2,"Iskilde","still","67","2016-Jan","12","1596","/images/image.jpg"));
 	}
@@ -31,6 +29,7 @@ public class MockProductDAO implements ProductDAO {
 	public Product getProduct(int ID) {
 		Product p = null;
 		for (Product product : inventory) {
+			System.out.println(product);
 			if (product.getID() == ID) {
 				p = product;
 				break;

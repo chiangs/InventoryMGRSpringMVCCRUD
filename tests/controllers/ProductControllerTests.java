@@ -53,7 +53,7 @@ public class ProductControllerTests {
 
 		@After
 		public void tearDown() {
-			mockDAO.loadInventory(); // cleanup
+//			mockDAO.loadInventory(); // cleanup
 		}
 		
 		
@@ -64,7 +64,7 @@ public class ProductControllerTests {
 				ModelAndView mv = result.getModelAndView();
 				assertEquals("viewInventory", mv.getViewName());
 				ModelMap map = mv.getModelMap();
-				List<Product> prodList = (List<Product>)map.get("productList");
+				List<Product> prodList = (List<Product>)map.get("inventory");
 				assertNotNull(prodList);
 				assertEquals(2, prodList.size());
 				
@@ -77,21 +77,22 @@ public class ProductControllerTests {
 		@Test
 		public void test_Get_ProductData_with_valid_ID_param_returns_Product() {
 			try {
-				MvcResult result = mockMvc.perform(get("/GetProductData.do").param("id", "3"))
+				MvcResult result = mockMvc.perform(get("/EditProduct.do").param("id", "1"))
 						.andExpect(status().isOk()).andReturn();
 				ModelAndView mv = result.getModelAndView();
-				assertEquals("viewProduct", mv.getViewName());
+				assertEquals("editProduct", mv.getViewName());
 				ModelMap map = mv.getModelMap();
+				System.out.println(map.get("product"));
 				assertNotNull(map.get("product"));
-				
 				Product item = (Product)map.get("product");
 				assertEquals(1, item.getID());
 				assertEquals("Iskilde", item.getBrand());
 				assertEquals("still", item.getType());
-				assertEquals(33, item.getSize());
+				assertEquals("33", item.getSize());
 				assertEquals("2015-Jan", item.getBatch());
-				assertEquals(12, item.getQtyCarton());
-				assertEquals(1596, item.getQtyPallet());
+				assertEquals("12", item.getQtyCarton());
+				assertEquals("1596", item.getQtyPallet());
+				assertEquals("/images/image.jpg", item.getImage());
 
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -101,12 +102,11 @@ public class ProductControllerTests {
 		
 		@Test
 		public void test_Get_ProductData_with_invalid_ID_param_returns_null() {
-			System.out.println("test");
 			try {
 				MvcResult result = mockMvc.perform(get("/GetProductData.do").param("id", "3"))
 						.andExpect(status().isOk()).andReturn();
 				ModelAndView mv = result.getModelAndView();
-				assertEquals("viewProduct", mv.getViewName());
+				assertEquals("viewInventory", mv.getViewName());
 				ModelMap map = mv.getModelMap();
 				assertNull(map.get("product"));
 
@@ -137,31 +137,31 @@ public class ProductControllerTests {
 //				fail(e.toString());
 //			}
 		
-		@Test
-		public void test_Post_NewProduct_do_adds_product() {
-			try {
-				MvcResult result = mockMvc.perform(post("/NewProduct.do").param("id", "3").param("brand", "Iskilde").param("type", "sparkling").param("size", "67").param("batch (YYYY-Mmm)", "2016-Dec").param("Qty pr Carton", "12"))
-						.andExpect(status().isOk()).andReturn();
-				ModelAndView mv = result.getModelAndView();
-				assertEquals("viewProduct", mv.getViewName());
-				ModelMap map = mv.getModelMap();
-				assertNotNull(map.get("product"));
-				
-				Product item = (Product)map.get("product");
-				assertEquals(3, item.getID());
-				assertEquals("Iskilde", item.getBrand());
-				assertEquals("sparkling", item.getType());
-				assertEquals(67, item.getSize());
-				assertEquals(null, item.getBatch());
-				assertEquals(null, item.getQtyCarton());
-				assertEquals(null, item.getQtyPallet());
-
-
-			} catch (Exception e) {
-				e.printStackTrace();
-				fail(e.toString());
-			}	
-		}
+//		@Test
+//		public void test_Post_NewProduct_do_adds_product() {
+//			try {
+//				MvcResult result = mockMvc.perform(post("/NewProduct.do").param("id", "3").param("brand", "Iskilde").param("type", "sparkling").param("size", "67").param("batch (YYYY-Mmm)", "2016-Dec").param("Qty pr Carton", "12"))
+//						.andExpect(status().isOk()).andReturn();
+//				ModelAndView mv = result.getModelAndView();
+//				assertEquals("viewProduct", mv.getViewName());
+//				ModelMap map = mv.getModelMap();
+//				assertNotNull(map.get("product"));
+//				
+//				Product item = (Product)map.get("product");
+//				assertEquals(3, item.getID());
+//				assertEquals("Iskilde", item.getBrand());
+//				assertEquals("sparkling", item.getType());
+//				assertEquals(67, item.getSize());
+//				assertEquals(null, item.getBatch());
+//				assertEquals(null, item.getQtyCarton());
+//				assertEquals(null, item.getQtyPallet());
+//
+//
+//			} catch (Exception e) {
+//				e.printStackTrace();
+//				fail(e.toString());
+//			}	
+//		}
 		
 //		@Test
 //		public void test_Post_DeleteProduct_do_deletes_product() {
