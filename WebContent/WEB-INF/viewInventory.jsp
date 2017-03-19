@@ -84,19 +84,21 @@
 			</div>
 		</div>
 
-		<div class="container-fluid well">
-			<div id="inventoryList">
-				<table style="overflow-x: auto;">
+		<div class="container" id="inventoryList">
+			<table class="table-hover table-responsive">
+				<thead class="thead-inverse">
 					<tr>
-						<th class="spacing">Product ID</th>
-						<th class="spacing">Brand</th>
-						<th class="spacing">Type</th>
-						<th class="spacing">Size</th>
-						<th class="spacing">Batch Date</th>
-						<th class="spacing">Qty pr Carton</th>
-						<th class="spacing">Qty pr Pallet</th>
+						<th>Product ID</th>
+						<th>Brand</th>
+						<th>Type</th>
+						<th>Size</th>
+						<th>Batch Date</th>
+						<th>Qty pr Carton</th>
+						<th>Qty pr Pallet</th>
+						<th colspan="3">Actions</th>
 					</tr>
-
+				</thead>
+				<tbody>
 					<c:forEach var="item" items="${inventory}">
 						<tr>
 							<td class="spacing">${item.ID}</td>
@@ -123,10 +125,10 @@
 								</form></td>
 						</tr>
 					</c:forEach>
-				</table>
-			</div>
+				</tbody>
+			</table>
 		</div>
-
+	
 
 
 

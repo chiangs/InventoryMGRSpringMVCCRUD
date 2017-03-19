@@ -1,3 +1,8 @@
+#inventorylist {
+	margin 0 auto;
+	width: 100%;
+}
+
 table tr {
 	width: 100%;
 	text-align: center;
@@ -16,10 +21,15 @@ table td {
 }
 
 .viewButton {
-	padding-left: 20px;
+	padding-left: 120px;
 }
 
 .addButtonTop {
 	position:fixed;
 	right:0;
-	}
+}
+
+.thead-inverse {
+	background: black;
+	color: #fff;
+}
