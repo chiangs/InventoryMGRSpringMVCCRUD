@@ -3,6 +3,10 @@
 	width: 100%;
 }
 
+table {
+	margin-bottom: 50px;
+}
+
 table tr {
 	width: 100%;
 	text-align: center;
